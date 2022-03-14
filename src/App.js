@@ -1,12 +1,16 @@
 import "./App.css";
-import Timer from "./components/Timer";
+import { Routes, Route } from "react-router-dom";
+
 import QuestionsList from "./pages/QuestionsList";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
     <div className="App">
-      <Timer />
-      <QuestionsList />
+      <Routes>
+        <Route path="/" element={<UserProfile />} />
+        <Route path="questionsList" element={<QuestionsList />} />
+      </Routes>
     </div>
   );
 }

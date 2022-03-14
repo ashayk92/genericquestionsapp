@@ -1,6 +1,7 @@
 import React from "react";
 import AnswerOptions from "../../components/AnswerOptions";
 import GenericTable from "../../components/GenericTable";
+import Timer from "../../components/Timer";
 import "../../styles.css";
 class QuestionsList extends React.Component {
   constructor(props) {
@@ -13,13 +14,16 @@ class QuestionsList extends React.Component {
   }
   render() {
     return (
-      <div className="divStyle">
-        <GenericTable index={this.state.counter} />
-        <AnswerOptions index={this.state.counter} />
-        <button className="buttonStyle" onClick={() => this.submitHandler()}>
-          Submit
-        </button>
-      </div>
+      <>
+        <Timer />
+        <div className="divStyle">
+          <GenericTable index={this.state.counter} />
+          <AnswerOptions index={this.state.counter} />
+          <button className="buttonStyle" onClick={() => this.submitHandler()}>
+            Submit
+          </button>
+        </div>
+      </>
     );
   }
 }

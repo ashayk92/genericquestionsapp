@@ -6,7 +6,7 @@ import "../../styles.css";
 class QuestionsList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { counter: 0 };
+    this.state = { counter: 0, resetTimer: 300 };
   }
   submitHandler() {
     console.log("inside submit handler");
@@ -15,13 +15,23 @@ class QuestionsList extends React.Component {
   render() {
     return (
       <>
-        <Timer />
+        <Timer
+          index={this.state.counter}
+          expiryTimeStamp={this.state.resetTimer}
+        />
         <div className="divStyle">
           <GenericTable index={this.state.counter} />
           <AnswerOptions index={this.state.counter} />
-          <button className="buttonStyle" onClick={() => this.submitHandler()}>
-            Submit
-          </button>
+          {this.state.counter < 9 ? (
+            <button
+              className="buttonStyle"
+              onClick={() => this.submitHandler()}
+            >
+              Next
+            </button>
+          ) : (
+            <></>
+          )}
         </div>
       </>
     );

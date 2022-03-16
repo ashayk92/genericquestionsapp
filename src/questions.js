@@ -8,6 +8,7 @@ const questionsArray = [
       "Koneru Humpy",
       "None of the above",
     ],
+    answer: "Kalpana Chawla",
   },
   {
     question: "2. Who was the first Indian to go to space?",
@@ -17,6 +18,7 @@ const questionsArray = [
       "Rakesh Sharma",
       "Nagapathi Bhat",
     ],
+    answer: "Rakesh Sharma",
   },
   {
     question:
@@ -27,10 +29,12 @@ const questionsArray = [
       "Duncan Chessell",
       "Phu Dorji",
     ],
+    answer: "Reinhold Messner",
   },
   {
     question: "4. Who built the Jama Masjid?",
     optionsArray: ["Jahangir", "Akbar", "Imam Bukhari", "Shah Jahan"],
+    answer: "Shah Jahan",
   },
   {
     question: "5. Who wrote the Indian National Anthem?",
@@ -40,6 +44,7 @@ const questionsArray = [
       "Swami Vivekanand",
       "None of the above",
     ],
+    answer: "Rabindranath Tagore",
   },
   {
     question: "6. Who was the first Indian Scientist to win a Nobel Prize?",
@@ -49,6 +54,7 @@ const questionsArray = [
       "Hargobind Khorana",
       "Subramanian Chrandrashekar",
     ],
+    answer: "C.V Raman",
   },
   {
     question: "7. Who is the first Indian to win a Nobel Prize?",
@@ -58,6 +64,7 @@ const questionsArray = [
       "Hargobind Khorana",
       "Mother Theresa",
     ],
+    answer: "Rabindranath Tagore",
   },
   {
     question: "8. Who was the first Indian woman to win the Miss World Title?",
@@ -67,6 +74,7 @@ const questionsArray = [
       "Reita Faria",
       "Diya Mirza",
     ],
+    answer: "Reita Faria",
   },
   {
     question: "9. Who was the first President of India?",
@@ -76,6 +84,7 @@ const questionsArray = [
       "Dr. Rajendra Prasad",
       "Zakir Hussain",
     ],
+    answer: "Dr. Rajendra Prasad",
   },
   {
     question: `10. Which of the following earned the name 'Flying Sikh'?`,
@@ -85,6 +94,7 @@ const questionsArray = [
       "Bhagat Singh",
       "Sardar Vallabhbhai Patel",
     ],
+    answer: "Milkha Singh",
   },
 ];
 

@@ -8,10 +8,10 @@ class QuestionsList extends React.Component {
     super(props);
     this.state = { counter: 0, resetTimer: 300 };
   }
-  submitHandler() {
-    console.log("inside submit handler");
+  nextHandler() {
     this.setState({ counter: this.state.counter + 1 });
   }
+  submitHandler() {}
   render() {
     return (
       <>
@@ -23,14 +23,16 @@ class QuestionsList extends React.Component {
           <GenericTable index={this.state.counter} />
           <AnswerOptions index={this.state.counter} />
           {this.state.counter < 9 ? (
+            <button className="buttonStyle" onClick={() => this.nextHandler()}>
+              Next
+            </button>
+          ) : (
             <button
               className="buttonStyle"
               onClick={() => this.submitHandler()}
             >
-              Next
+              Submit
             </button>
-          ) : (
-            <></>
           )}
         </div>
       </>

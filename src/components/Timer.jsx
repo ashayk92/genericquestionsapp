@@ -1,6 +1,6 @@
 import React from "react";
 const Timer = (props) => {
-  const { expiryTimeStamp } = props;
+  const { expiryTimeStamp, index } = props;
   const [countDown, setCountDown] = React.useState(expiryTimeStamp);
   const [runTimer, setRunTimer] = React.useState(true);
 
@@ -17,7 +17,7 @@ const Timer = (props) => {
     }
 
     return () => clearInterval(timerId);
-  }, [expiryTimeStamp, runTimer]);
+  }, [expiryTimeStamp, runTimer, index]);
 
   React.useEffect(() => {
     if (countDown < 0 && runTimer) {

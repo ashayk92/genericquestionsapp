@@ -1,9 +1,11 @@
 import React from "react";
 import questionsArray from "../../questions";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router";
 import GeneratePieChart from "../../components/GeneratePieChart";
 
 const DisplayResult = () => {
+  const navigate = useNavigate();
   const usersArray = useSelector((state) => state.userArray);
   const correctAnswersArray = questionsArray.filter((element, index) => {
     let correctAnswer = "";
@@ -16,8 +18,8 @@ const DisplayResult = () => {
     (correctAnswersArray.length / questionsArray.length) * 100;
   const wrongPercentage = 100 - correctPercentage;
 
-  const chartClickEvent = (e) => {
-    console.log(e);
+  const chartClickEvent = () => {
+    navigate("/displayTable");
   };
   const options = {
     exportEnabled: true,

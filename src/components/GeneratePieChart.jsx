@@ -4,7 +4,6 @@ import CanvasJSReact from "./canvasjs.react";
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const GeneratePieChart = (props) => {
   const { options } = props;
-  console.log(options);
   return (
     <div>
       <CanvasJSChart

@@ -27,12 +27,7 @@ class QuestionsList extends React.Component {
               Next
             </button>
           ) : (
-            <button
-              className="buttonStyle"
-              onClick={() => this.submitHandler()}
-            >
-              Submit
-            </button>
+            <></>
           )}
         </div>
       </>

@@ -5,7 +5,7 @@ const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const GeneratePieChart = (props) => {
   const { options } = props;
   return (
-    <div>
+    <div style={{ margin: "20px" }}>
       <CanvasJSChart
         options={options}
         /* onRef={ref => this.chart = ref} */

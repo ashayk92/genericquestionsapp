@@ -4,7 +4,6 @@ import { useNavigate } from "react-router";
 const SessionComponent = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log("User logged in");
 
   setTimeout(() => {
     navigate("/");

@@ -6,7 +6,7 @@ import GeneratePieChart from "../../components/GeneratePieChart";
 
 const DisplayResult = () => {
   const navigate = useNavigate();
-  const usersArray = useSelector((state) => state.userArray);
+  const usersArray = useSelector((state) => state.myReducer.userArray);
   const correctAnswersArray = questionsArray.filter((element, index) => {
     let correctAnswer = "";
     if (element.answer === usersArray[index].answer) {

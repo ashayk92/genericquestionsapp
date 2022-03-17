@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import "../../styles.css";
 
 function UserProfile() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [userName, setUserName] = useState(null);
 
   const submitHandler = (event) => {
     if (!userName) {
       event.preventDefault();
     } else {
-      localStorage.setItem("currentUser", userName);
+      //localStorage.setItem("currentUser", userName);
+      dispatch({ type: "setUser", value: userName });
       navigate("/questionsList");
     }
   };

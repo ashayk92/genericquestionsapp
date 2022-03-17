@@ -1,5 +1,5 @@
 import React from "react";
-import CanvasJSReact from "./canvasjs.react";
+import CanvasJSReact from "../utils/canvasjs.react";
 
 const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const GeneratePieChart = (props) => {

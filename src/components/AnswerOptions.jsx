@@ -20,7 +20,7 @@ const AnswerOptions = (props) => {
   return (
     <div className="optionsStyle">
       {questionsArray[index].optionsArray.map((element) => (
-        <div>
+        <div key={element}>
           <input
             key={element}
             value={element}

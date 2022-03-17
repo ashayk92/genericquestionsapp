@@ -2,7 +2,7 @@ import React from "react";
 import questionsArray from "../../questions";
 import { useSelector } from "react-redux";
 const AnswersTable = () => {
-  const userAnswers = useSelector((state) => state.userArray);
+  const userAnswers = useSelector((state) => state.myReducer.userArray);
   return (
     <table>
       <tbody>

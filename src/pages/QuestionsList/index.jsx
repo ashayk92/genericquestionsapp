@@ -18,6 +18,7 @@ class QuestionsList extends React.Component {
         <Timer
           index={this.state.counter}
           expiryTimeStamp={this.state.resetTimer}
+          nextQuestionHandler={() => this.nextHandler()}
         />
         <div className="divStyle">
           <GenericTable index={this.state.counter} />

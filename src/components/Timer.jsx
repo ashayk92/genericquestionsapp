@@ -1,6 +1,6 @@
 import React from "react";
 const Timer = (props) => {
-  const { expiryTimeStamp, index } = props;
+  const { expiryTimeStamp, index, nextQuestionHandler } = props;
   const [countDown, setCountDown] = React.useState(expiryTimeStamp);
   const [runTimer, setRunTimer] = React.useState(true);
 
@@ -21,13 +21,15 @@ const Timer = (props) => {
 
   React.useEffect(() => {
     if (countDown < 0 && runTimer) {
-      setRunTimer(false);
+      setRunTimer(true);
       setCountDown(0);
+      nextQuestionHandler();
     }
-  }, [countDown, runTimer]);
+  }, [countDown, runTimer, nextQuestionHandler]);
 
   const seconds = String(countDown % 60).padStart(2, 0);
   const minutes = String(Math.floor(countDown / 60)).padStart(2, 0);
+
   return (
     <>
       <span>{minutes}</span>:<span>{seconds}</span>
